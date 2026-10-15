@@ -1,0 +1,129 @@
+login to git
+click on new repository
+name: learn-shell and create repository
+
+Git bash
+cd c\devops\daws-92s\repos
+git clone https://github.com/saraswathib906-gif/learn-shell.git
+
+vscode is popular ide & download & install
+file-open folder-select repos folder
+learn shell repository appeared 
+under new file - 01-hello-world.sh( shell script extension.sh)
+
+in 01-shell script.sh
+#!/bin/bash  -- must and should first line
+# this is the first comment,just for information purpose, this is not going to be executed
+echo "hello world"
+
+echo = to print
+this is the shell script we need run on the Linux server,
+
+create security group = my-ssh-92s under ssh port under myip for ssh description 
+launch instance = she1l-script - devops practice - no key pair - under my-ssh-92s security group
+
+git basha
+cd learn-shell/  - it give on main branch means you are in git repository
+git status
+git add 01-hello-world.sh
+git status  - commit above one
+git commit -m "my first hello world shell script"
+
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+git config --global user.email "saraswathib906@gmail.com"
+git config --global user.name " saraswathi "
+git commit -m "my first hello world shell script"
+git status  - nothing to commit
+git push origin main - sign in with browser for the first time
+cd ../learn-shell/ -change repository to some repository to learn shell 
+
+vs code to git
+1. add to staging/temp area
+2. commit to local repository
+3. push to remote repository
+
+vs code = workspace
+staging area = git add
+local repository = git commit
+remote repository(git) = git push
+
+now we should bring this code to Linux server
+mobaxterm
+copy the public address of she1l-script instance to mobaxterm under daws_92s user 
+ec2@private ip : sudo su -
+root@public ip: git clone git clone https://github.com/saraswathib906-gif/learn-shell.git
+(from git url to Linux server)
+cd ..  - ( it changes to one repository to another repository)
+cd learn-shell/
+ls -l
+root@public ip /learn - shell :  sh 01-hello-world.sh 
+(o/p hello world)
+
+folder vs git repo
+=================
+if the folder has .git it is called as git repo
+if the folder does not have .git it is just a normal folder
+
+ls -la
+cd .git/ ( now its changes to .git repository)
+ls -l
+cat config ( git stores all the information here)
+cd .. ( come back to learn shell)
+
+vs code
+create one folder  i.e my folder 
+under my-folder create a file 01-shell script.sh
+in 01-shell script.sh
+#!/bin/bash  
+echo "hello world!"
+
+git bash 
+cd ../my-folder/  - ( all are under repos folder only)
+ls -l
+ls -la
+git init ( my-folder is a normal folder now we convert into git )
+ls -la ( then it create a .git ) & its is in master
+git branch -m main ( convert to master to main , but we cant do changes in main branch, because it will change in production so that's why we need a copy)
+
+we need to do remote repository
+Git
+new repository
+name: my-folder
+create repository
+
+git add.
+git commit -m "existing repo"
+git push origin main (error; could not read from the remote repository)
+my-folder ( main)
+git remote add origin repository of my-folder
+git push -u origin main  ( 01-shell script.sh is appeared in git repository)
+
+{
+git init
+git branch -M main
+git add .
+git commit
+git remote add origin <URL>
+git push origin main
+}
+my-folder is called repository
+
+back to shell scripting
+vs code
+file Namae: 02-conversation.sh
+#
+
+
+
+
+
+
+
